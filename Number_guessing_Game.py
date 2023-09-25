@@ -18,9 +18,9 @@ if start > end:
 
 random_number = random.randint(start,end)
 guesses=1
+
 while True:
     
-
     guess=(input("Guess a number: "))
 
     if ((guess.isdigit()) or (guess.startswith('-') and guess[1:].isdigit())):
