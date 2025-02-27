@@ -1,2 +1,3 @@
-z = 3 + 4j
-print(type(z),'\n',z) 
+is_weekend = False
+if not is_weekend:
+    print("It's a weekday")
