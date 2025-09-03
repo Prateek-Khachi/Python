@@ -63,5 +63,4 @@ def bfs(root: Optional[TreeNode]) -> None:
 list_of_values = [1, 2, 3, 4, 5, 6]
 tree = create_tree_from_list(list_of_values)    
 
-bfs(tree)          
-
+bfs(tree)
