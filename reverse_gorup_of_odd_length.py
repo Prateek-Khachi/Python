@@ -8,9 +8,27 @@ class TreeNode:
 
 def reverse_even_levels(root):
     # TODO: Complete this function to reverse node values at every even level
+    if not root:
+        return None
+    
+    dq = deque([root])
+    level = 0
+    while dq:
+        sz = len(dq)
+        if level %2 ==0:
+            for x in range(len(dq)//2):
+                dq[x].val , dq[len(dq)-1 - x].val = dq[len(dq)-1 - x].val, dq[x].val
+
+        while sz:
+            node = dq.popleft()
+            if node.left:
+                dq.append(node.left)
+            if node.right:
+                dq.append(node.right)
+            sz -= 1
+        level+=1    
     return root
 
-# Helper function to print the tree in level order
 def print_level_order(root):
     if not root:
         return []
@@ -23,7 +41,7 @@ def print_level_order(root):
             queue.append(node.left)
         if node.right:
             queue.append(node.right)
-        print(x.val for x in queue)
+    print(result)
 
 # Example usage
 if __name__ == "__main__":
