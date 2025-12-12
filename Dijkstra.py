@@ -2,8 +2,9 @@ from collections import defaultdict
 import heapq
 from typing import Dict
 
+
 class Solution:
-    def shortestPath(self, n: int, edges: List[List[int]], src: int) -> Dict[int, int]:
+    def shortestPath(self, n: int, edges: list[list[int]], src: int) -> Dict[int, int]:
 
         alist = defaultdict(list)
 
